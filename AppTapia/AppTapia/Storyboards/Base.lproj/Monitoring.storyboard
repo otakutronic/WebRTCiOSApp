@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1XE-N6-lGD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tapia Monitoring-->
+        <scene sceneID="1fr-aT-zAL">
+            <objects>
+                <tableViewController id="xCt-Ko-8D0" customClass="TableViewControllerMonitor" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="9N0-lt-q9V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewEntry" rowHeight="90" id="bhE-UX-28X" customClass="TableViewEntry" customModule="AppTapia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bhE-UX-28X" id="biT-e6-NTs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="imp-Hv-ssz" customClass="MJIRoundImageView" customModule="AppTapia" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJl-VV-ySV">
+                                            <rect key="frame" x="97" y="8" width="270" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="XJl-VV-ySV" id="jkV-5w-DTK"/>
+                                    <outlet property="photoImageView" destination="imp-Hv-ssz" id="cNg-vz-pCY"/>
+                                    <segue destination="zkj-dr-61l" kind="presentation" identifier="MonitoringControlViewController" id="3mR-6u-Qv9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xCt-Ko-8D0" id="prs-Rs-Z13"/>
+                            <outlet property="delegate" destination="xCt-Ko-8D0" id="ScK-gA-v2M"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tapia Monitoring" id="wRm-0y-8rd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bb0-f8-ORt"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuq-dD-ZAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5297" y="3850"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T72-JW-el9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1XE-N6-lGD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Tab_sentiment" selectedImage="Tab_sentiment" id="jQr-Cw-6aU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gMY-Sd-RET">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xCt-Ko-8D0" kind="relationship" relationship="rootViewController" id="PDg-GH-6Dq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0w-1F-Ved" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4513" y="3850"/>
+        </scene>
+        <!--Monitoring Control View Controller-->
+        <scene sceneID="Ca6-oI-bV9">
+            <objects>
+                <viewController id="p2U-5P-xTL" customClass="MonitoringControlViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RZe-MO-ZcR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z3x-3f-ejX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wmn-0v-FeR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXC-wJ-R75" customClass="RTCEAGLVideoView">
+                                <rect key="frame" x="-4" y="64" width="383" height="334"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2j-Qo-9JF">
+                                <rect key="frame" x="16" y="398" width="343" height="269"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjH-Qh-278">
+                                        <rect key="frame" x="137" y="100" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="G6c-Vs-SZn"/>
+                                            <constraint firstAttribute="height" constant="70" id="vFf-zM-fqy"/>
+                                        </constraints>
+                                        <state key="normal" image="Btn_AddPhoto"/>
+                                        <connections>
+                                            <action selector="takePictureButtonClicked:" destination="p2U-5P-xTL" eventType="touchUpInside" id="2fR-Bv-6Rx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-eA-JY6">
+                                        <rect key="frame" x="137" y="27" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="V6f-uG-yU3"/>
+                                            <constraint firstAttribute="width" constant="70" id="ZSb-rk-YKt"/>
+                                        </constraints>
+                                        <state key="normal" image="Btn_ArrowUp"/>
+                                        <connections>
+                                            <action selector="upTouchDown:" destination="p2U-5P-xTL" eventType="touchDown" id="Yhf-aa-ags"/>
+                                            <action selector="upTouchUp:" destination="p2U-5P-xTL" eventType="touchUpInside" id="35c-m3-eb7"/>
+                                            <action selector="upTouchUpOutside:" destination="p2U-5P-xTL" eventType="touchUpOutside" id="GIs-nT-8AN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb0-xs-Acd">
+                                        <rect key="frame" x="210" y="100" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="fTG-Sm-PVS"/>
+                                            <constraint firstAttribute="height" constant="70" id="kiS-Zy-BfN"/>
+                                        </constraints>
+                                        <state key="normal" image="Btn_ArrowRight"/>
+                                        <connections>
+                                            <action selector="rightTouchDown:" destination="p2U-5P-xTL" eventType="touchDown" id="25O-IE-F08"/>
+                                            <action selector="rightTouchUp:" destination="p2U-5P-xTL" eventType="touchUpInside" id="qNg-s9-GYP"/>
+                                            <action selector="rightTouchUpOutside:" destination="p2U-5P-xTL" eventType="touchUpOutside" id="S6k-fG-DOD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-UR-xb2">
+                                        <rect key="frame" x="137" y="173" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="IRK-QA-Yt2"/>
+                                            <constraint firstAttribute="height" constant="70" id="Zkc-Yr-nOA"/>
+                                        </constraints>
+                                        <state key="normal" image="Btn_ArrowDown"/>
+                                        <connections>
+                                            <action selector="downTouchDown:" destination="p2U-5P-xTL" eventType="touchDown" id="S5W-SL-03K"/>
+                                            <action selector="downTouchUp:" destination="p2U-5P-xTL" eventType="touchUpInside" id="CZR-7w-FGX"/>
+                                            <action selector="downTouchUpOutside:" destination="p2U-5P-xTL" eventType="touchUpOutside" id="T1N-j4-Ksu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFB-cB-6Vw">
+                                        <rect key="frame" x="64" y="100" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="hsj-HR-Oqu"/>
+                                            <constraint firstAttribute="height" constant="70" id="rk0-C6-nf2"/>
+                                        </constraints>
+                                        <state key="normal" image="Btn_ArrowLeft"/>
+                                        <connections>
+                                            <action selector="leftTouchDown:" destination="p2U-5P-xTL" eventType="touchDown" id="6LC-QM-dlR"/>
+                                            <action selector="leftTouchUp:" destination="p2U-5P-xTL" eventType="touchUpInside" id="NXQ-20-sL7"/>
+                                            <action selector="leftTouchUpOutside:" destination="p2U-5P-xTL" eventType="touchUpOutside" id="Qwn-iJ-MyU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="DjH-Qh-278" firstAttribute="centerY" secondItem="f2j-Qo-9JF" secondAttribute="centerY" id="7ux-qD-trs"/>
+                                    <constraint firstItem="rb0-xs-Acd" firstAttribute="baseline" secondItem="LFB-cB-6Vw" secondAttribute="baseline" id="GfH-ll-0rx"/>
+                                    <constraint firstItem="DjH-Qh-278" firstAttribute="centerX" secondItem="5bP-eA-JY6" secondAttribute="centerX" id="IfE-jI-vz6"/>
+                                    <constraint firstItem="rb0-xs-Acd" firstAttribute="leading" secondItem="DjH-Qh-278" secondAttribute="trailing" constant="3" id="S2f-Qx-RHG"/>
+                                    <constraint firstItem="DjH-Qh-278" firstAttribute="leading" secondItem="LFB-cB-6Vw" secondAttribute="trailing" constant="3" id="SBe-5z-qfq"/>
+                                    <constraint firstItem="DjH-Qh-278" firstAttribute="baseline" secondItem="LFB-cB-6Vw" secondAttribute="baseline" id="gD6-Pz-WdC"/>
+                                    <constraint firstItem="DjH-Qh-278" firstAttribute="top" secondItem="5bP-eA-JY6" secondAttribute="bottom" constant="3" id="gdA-hq-A4W"/>
+                                    <constraint firstItem="DjH-Qh-278" firstAttribute="centerX" secondItem="f2j-Qo-9JF" secondAttribute="centerX" id="mv8-Cc-s0I"/>
+                                    <constraint firstItem="z5u-UR-xb2" firstAttribute="top" secondItem="DjH-Qh-278" secondAttribute="bottom" constant="3" id="qIc-Pg-LjU"/>
+                                    <constraint firstItem="z5u-UR-xb2" firstAttribute="centerX" secondItem="5bP-eA-JY6" secondAttribute="centerX" id="ukP-Xf-NhY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oXC-wJ-R75" firstAttribute="top" secondItem="RZe-MO-ZcR" secondAttribute="bottom" id="57r-WT-z5S"/>
+                            <constraint firstItem="f2j-Qo-9JF" firstAttribute="top" secondItem="oXC-wJ-R75" secondAttribute="bottom" id="AXr-N1-t8u"/>
+                            <constraint firstItem="oXC-wJ-R75" firstAttribute="leading" secondItem="wmn-0v-FeR" secondAttribute="leadingMargin" constant="-20" id="WWH-Zq-bju"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oXC-wJ-R75" secondAttribute="trailing" constant="-20" id="cUg-4N-IWw"/>
+                            <constraint firstItem="oXC-wJ-R75" firstAttribute="height" secondItem="wmn-0v-FeR" secondAttribute="height" multiplier="0.5" id="gQ3-ZR-eHU"/>
+                            <constraint firstItem="Z3x-3f-ejX" firstAttribute="top" secondItem="f2j-Qo-9JF" secondAttribute="bottom" id="gfX-YY-3QB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f2j-Qo-9JF" secondAttribute="trailing" id="yHN-0p-7Cq"/>
+                            <constraint firstItem="f2j-Qo-9JF" firstAttribute="leading" secondItem="wmn-0v-FeR" secondAttribute="leadingMargin" id="zQe-97-ldK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="B1T-ZP-M1m">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="EfL-tc-9xU">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="p2U-5P-xTL" id="6QB-kc-Zdv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addPhotoBtn" destination="DjH-Qh-278" id="ArE-cI-RBw"/>
+                        <outlet property="downBtn" destination="z5u-UR-xb2" id="Qmr-AQ-q5k"/>
+                        <outlet property="leftBtn" destination="LFB-cB-6Vw" id="5Bo-M0-fb6"/>
+                        <outlet property="remoteView" destination="oXC-wJ-R75" id="rGJ-SC-b58"/>
+                        <outlet property="rightBtn" destination="rb0-xs-Acd" id="sEK-hl-EJk"/>
+                        <outlet property="upBtn" destination="5bP-eA-JY6" id="vtT-ea-dp8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWc-on-5GJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6894" y="3850"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uQG-Xt-YCt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zkj-dr-61l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MdM-Tx-rC0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p2U-5P-xTL" kind="relationship" relationship="rootViewController" id="YLk-yo-bMM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAk-A6-tb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6095" y="3850"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Btn_AddPhoto" width="29" height="29"/>
+        <image name="Btn_ArrowDown" width="29" height="29"/>
+        <image name="Btn_ArrowLeft" width="29" height="29"/>
+        <image name="Btn_ArrowRight" width="29" height="29"/>
+        <image name="Btn_ArrowUp" width="29" height="29"/>
+        <image name="Tab_sentiment" width="25" height="25"/>
+        <image name="defaultPhoto" width="540" height="540"/>
+    </resources>
+</document>

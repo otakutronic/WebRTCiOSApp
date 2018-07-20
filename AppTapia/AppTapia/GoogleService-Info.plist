@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>574534710236-eb1mjjtidbp03q3ttv8pgu10h0nmpvh2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.574534710236-eb1mjjtidbp03q3ttv8pgu10h0nmpvh2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBsDdaasllRHC-OANlQ61BNwh9PKx0XoIw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>574534710236</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mji.tapia.apptapia</string>
+	<key>PROJECT_ID</key>
+	<string>tapia-rtc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tapia-rtc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:574534710236:ios:1bf5f18c40c1d1e7</string>
+	<key>DATABASE_URL</key>
+	<string>https://tapia-rtc.firebaseio.com</string>
+</dict>
+</plist>

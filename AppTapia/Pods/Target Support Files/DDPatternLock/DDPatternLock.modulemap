@@ -1,0 +1,6 @@
+framework module DDPatternLock {
+  umbrella header "DDPatternLock-umbrella.h"
+
+  export *
+  module * { export * }
+}

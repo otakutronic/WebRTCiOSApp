@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Tapia is not near."; ObjectID = "CdT-QD-JSR"; */
+"CdT-QD-JSR.text" = "Tapia is not near.";
+
+/* Class = "UIButton"; normalTitle = "Face-To-Face\nAuthentication"; ObjectID = "Ddq-yQ-N1G"; */
+"Ddq-yQ-N1G.normalTitle" = "Face-To-Face\nAuthentication";
+
+/* Class = "UILabel"; text = "Tapia is near."; ObjectID = "HaY-Xw-yld"; */
+"HaY-Xw-yld.text" = "Tapia is near.";
+
+/* Class = "UINavigationItem"; title = "タピアりんく"; ObjectID = "JYS-h5-FZH"; */
+"JYS-h5-FZH.title" = "タピアりんく";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Lqz-rb-ZiU"; */
+"Lqz-rb-ZiU.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Tapia Link"; ObjectID = "NSn-Lk-MB9"; */
+"NSn-Lk-MB9.title" = "Tapia Link";
+
+/* Class = "UITextField"; placeholder = "Enter meal name"; ObjectID = "ZMC-df-DBO"; */
+"ZMC-df-DBO.placeholder" = "Enter meal name";
+
+/* Class = "UIButton"; normalTitle = "Phone Number\nAuthentication"; ObjectID = "c1l-MM-IgS"; */
+"c1l-MM-IgS.normalTitle" = "Phone Number\nAuthentication";
+
+/* Class = "UINavigationItem"; title = "New Meal"; ObjectID = "fcM-kw-pG3"; */
+"fcM-kw-pG3.title" = "New Meal";
+
+/* Class = "UITextView"; text = "タピアりんくとはタピア本体とアプリの接続を行うことです。下記より設定してください。"; ObjectID = "zL4-DJ-Z42"; */
+"zL4-DJ-Z42.text" = "タピアりんくとはタピア本体とアプリの接続を行うことです。下記より設定してください。";

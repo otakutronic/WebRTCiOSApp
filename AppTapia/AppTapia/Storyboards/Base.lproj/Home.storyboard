@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QOm-UK-joW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tapia Home-->
+        <scene sceneID="6jQ-hY-NIL">
+            <objects>
+                <viewController id="X8n-Qn-WYh" customClass="HomeViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wkr-4N-o8g"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qjj-on-CX7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c1k-gP-Pul">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="yxf-uw-SRg" customClass="MJIRoundImageView" customModule="AppTapia" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="wKU-kF-Ze3"/>
+                                    <constraint firstAttribute="width" constant="240" id="wa7-dz-IEE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yxf-uw-SRg" firstAttribute="centerY" secondItem="c1k-gP-Pul" secondAttribute="centerY" id="pxx-Re-Twc"/>
+                            <constraint firstItem="yxf-uw-SRg" firstAttribute="centerX" secondItem="c1k-gP-Pul" secondAttribute="centerX" id="qv0-4I-7pU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="77M-6U-35W"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tapia Home" id="ozf-XY-n8w">
+                        <barButtonItem key="rightBarButtonItem" image="ToolBar_setting" id="kWA-eW-b4o">
+                            <connections>
+                                <segue destination="WGF-L8-eyG" kind="presentation" id="d4i-4q-KFm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Blv-k8-eeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5281" y="-862"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JFY-2d-KNJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QOm-UK-joW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Tab_home" selectedImage="Tab_home" id="rtO-d6-NGi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uTG-xB-rNS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X8n-Qn-WYh" kind="relationship" relationship="rootViewController" id="rre-Bc-kIy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hm-Hg-e5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4526" y="-861"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Jpd-Tj-zBp">
+            <objects>
+                <tableViewController id="unK-1D-o6m" customClass="TableViewControllerSettings" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" id="icf-ce-opr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TableViewEntry" rowHeight="61" id="Grz-8y-g7L" customClass="TableViewEntry" customModule="AppTapia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="61"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Grz-8y-g7L" id="EjA-Sj-v4H">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="4xb-uZ-0Jj">
+                                            <rect key="frame" x="8" y="0.0" width="52" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikT-Pd-66u">
+                                            <rect key="frame" x="72" y="20" width="270" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="ikT-Pd-66u" id="y8o-U5-rOO"/>
+                                    <outlet property="photoImageView" destination="4xb-uZ-0Jj" id="S7x-uW-C4H"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="unK-1D-o6m" id="7kL-hM-ySe"/>
+                            <outlet property="delegate" destination="unK-1D-o6m" id="8TW-0R-xq7"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Settings" id="xaC-ZD-hQB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kwr-0M-8Fl" userLabel="Done">
+                            <connections>
+                                <action selector="doneButtonClickedWithSender:" destination="unK-1D-o6m" id="YO2-6p-Cyb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="nwg-we-mH0" kind="show" identifier="ShowSettingTermsOfServiceViewController" id="gTG-cV-tun">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="h7V-P2-7OD" kind="show" identifier="ShowSettingPrivacyPolicyViewController" id="wbA-mw-vcs">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="qjo-8t-Er5" kind="show" identifier="ShowSettingDeleteAccountViewController" id="iwo-KY-Tih">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="Jgv-0R-p3O" kind="show" identifier="ShowRegisterTableViewController" id="234-WQ-1Ei"/>
+                        <segue destination="fa6-ct-ACT" kind="show" identifier="ShowSettingVersionTableViewController" id="WkL-qd-2Dn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCW-Sl-o4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6753" y="-862"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DzT-ir-Ihw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WGF-L8-eyG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NwZ-M9-LiC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="unK-1D-o6m" kind="relationship" relationship="rootViewController" id="xbx-JI-hu5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTb-IN-icb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6033" y="-862"/>
+        </scene>
+        <!--Setting Terms Of Service View Controller-->
+        <scene sceneID="Qbe-4U-D11">
+            <objects>
+                <viewController id="nwg-we-mH0" customClass="SettingTermsOfServiceViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KY2-o5-LpM"/>
+                        <viewControllerLayoutGuide type="bottom" id="494-mE-K4Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z41-Xm-GuO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ueq-w5-Oct">
+                                <rect key="frame" x="24" y="153" width="327" height="462"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">タピアあぷりは、コミュニケーションロボットタピア専用アプリ タピアあぷり利用規約（以下「本規約」といいます)とは、株式会社ＭＪＩ（以下「当社」といいます)が提供するコミュニケーションロボットタピア専用アプリ　タピアあぷり(以下「タピアあぷり」といいます)に関する全てのサービス（以下「本サービス」）をお客様に利用頂くための条件を定めるものです。
+
+
+第1条 定義
+
+「タピアあぷり」
+
+当社が提供するコミュニケーションロボットタピア（以下、「タピア本体」といいます）に搭載された一部機能を使用するためのサービスの総称。
+
+
+
+「タピアとーく」
+
+タピア本体を通してビデオ通話をすることができるサービス。
+
+
+
+「タピアあるばむ」
+
+タピア本体の画像の閲覧、スマートフォンへのダウンロード、およびタピアであんしんで撮影した画像の閲覧、スマートフォンへのダウンロードができるサービス。
+
+
+「タピアりんく」
+
+対面認証もしくは電話番号認証によってタピア本体とタピアあぷりを接続させるためのサービス。
+
+
+「タピアであんしん」
+
+タピア本体を遠隔操作によりモニタリング、およびモニタリング中に写真撮影できるサービス。
+
+
+
+その他、前項に付随するサービス
+
+
+
+第2条 規約への同意
+
+1. お客様は、本規約の定めに従って本サービスを利用しなければなりません。お客様は、本規約に有効かつ取消不能な同意をしないかぎり本サービスを利用できません。
+
+2. お客様が未成年者である場合は、親権者など法定代理人の同意を得たうえで本サービスを利用してください。
+
+3. お客様は、本サービスを実際に利用することによって本規約に有効かつ取消不能な同意をしたものとみなされます。
+
+4. 本サービスにおいて個別利用規約がある場合、お客様は、本規約のほか個別利用規約の定めにも従って本サービスを利用しなければなりません。
+
+
+
+第3条 規約の適用・変更
+
+当社は、必要と判断した場合には、お客様に通知することなく随時本規約を変更することがあります。変更後の本規約および個別利用規約は、当社が運営するウェブサイト内の適宜の場所に掲示された時点からその効力を生じるものとし、お客様は本規約および個別利用規約の変更後も本サービスを使い続けることにより、変更後の本規約および適用のある個別利用規約に対する有効かつ取消不能な同意をしたものとみなされます。かかる変更の内容をお客様に個別に通知することはいたしかねますので、本サービスをご利用の際には、随時、最新の本規約および適用のある個別利用規約をご参照ください。
+
+
+
+第4条 会員登録、アカウント
+
+1. お客様は、本サービスの利用に際してお客様ご自身に関する情報を登録する場合、真実、正確かつ完全な情報を提供しなければならず、常に最新の情報となるよう修正しなければなりません。
+
+2. お客様は、本サービスの利用に際してパスワードおよび秘密の答え、質問等を登録する場合、これを不正に利用されないようご自身の責任で厳重に管理しなければなりません。当社は、登録されたパスワードを利用して行なわれた一切の行為を、お客様ご本人の行為とみなすことができます。
+
+3. 本サービスに登録したお客様は、いつでもアカウントを削除して退会することができます。
+
+4. ​本サービスの登録資格は一身専属性のものとします。当社はお客様の死亡を知り得た時点を以って前項届出があったものとして取り扱わせていただきます。
+
+5. 当社は、お客様が本規約に違反しまたは違反するおそれがあると認めた場合、あらかじめお客様に通知することなく、アカウントを停止または削除することができます。
+
+6. 当社は、最終のアクセスから１年間以上経過しているアカウントを、あらかじめお客様に通知することなく削除することができます。
+
+7. お客様の本サービスにおけるすべての利用権は、理由を問わず、アカウントが削除された時点で消滅します。お客様が誤ってアカウントを削除した場合であっても、アカウントの復旧はできませんのでご注意ください。
+
+
+
+第5条 譲渡禁止等
+
+本サービスの提供を受ける権利および会員登録情報はお客様に一身専属的に帰属します。お客様の本サービスにおけるすべての利用権は、第三者に譲渡したり、売買、名義変更、質権の設定その他の担保に供する等の行為ができないものとします。
+
+
+
+第6条 プライバシー
+
+1. 当社は、お客様のプライバシーを尊重しています。
+
+2. お客様の登録情報および当社が取得したメンバーに関する情報は、当社の個人情報保護方針(プライバシーポリシー)に従って取り扱われます。 当社の個人情報保護方針に関しては、別途定めるプライバシーポリシーの記載をご参照ください。
+
+3. 当社からのお知らせ(新規サービス等の広告を含みます。)がある場合、タピアあぷりが取得したメールアドレス宛に当社からメールを送信する場合がありますので、ご了承ください。
+
+4. 本サービス内の個人情報を自発的に表示した場合、その情報は他のお客様によって使用される可能性があります。このような情報の共有・開示は、お客様ご自身の責任において行ってください。
+
+5. 当社は、お客様から収集した情報を安全に管理するため、セキュリティに最大限の注意を払っています。
+
+
+
+第7条 利用環境
+
+1. お客様は、本サービスを利用するためにインターネットに接続しなければなりません。お客様は、自らの責任と費用で、必要な機器、ソフトウェア等を適切に準備・操作するものとします。
+
+2. お客様は、関係官庁が提供する情報その他必要となる情報を参考にして、自己の利用環境に応じ、自らの責任と費用で、コンピュータ・ウィルスの感染、不正アクセスおよび情報漏洩の防止等のセキュリティを保持するものとします。
+
+3. 当社は、お客様がインターネットに接続するための準備・方法等については一切関与致しません。
+
+
+第8条 責任の制限
+
+1. 本サービスを利用するために必要なインターネット回線等の不具合により、本サービスの利用が不可能となったとしても、当社は一切責任を負いません。
+2. お客様による誤った利用、管理不十分、または第三者による不正使用等の当社の責に帰さない事由におり、お客様または第三者が損害を被った場合、当社は当該損害に関して一切責任を負いません。
+
+3. 当社は、お客様が本サービスを通じて得た情報等につき、その正確性および特定の目的への適合性等について、いかなる保証もいたしません。また、これらの情報等によりお客様または第三者が損害を被った場合、当社は当該損害に対して一切責任を負いません。
+4. 当社は、本サービスが第三者の知的財産権およびその他の権利を侵害していない事、本サービスが正常に動作することをなんら保障するものではなく、お客様その他の第三者が本サービスに関連して直接的または間接的に被ったいかなる損害についても責任を負いません。
+5. 本サービスは、当社が指定するサーバーに接続を行います。当社が指定するサーバーで提供される情報の完全性・有用性・正確性などについて、当社は一切責任を負いません。
+6. 当社は、本サービスに瑕疵が発見された場合、当社ホームページに掲載し、またはその他当社が適当と認める方法により、お客様に対し瑕疵のある旨を周知または通知するとともに、瑕疵のない本サービスを提供するか、または当該サービスの瑕疵を補修すべく努めますが、その実現を保証するものではありません。
+7. 前各号にかかわらす当社に帰責事由がある場合には、当社は損害賠償責任を負います。ただし、当社に故意または重過失がある場合を除き、社会通念上、債務不履行または不法行為から通常発生するものと考えられる損害を超える損害については責任を負わないものとします。
+
+
+第9条 海外での利用
+本サービスは海外でご利用頂けません。
+
+
+第10条 禁止事項
+お客様は、本サービスの利用において以下の行為をしてはならないものとします。また、当社はお客様が利用に際して以下の行為を行い、または行うおそれがあると判断した場合、本サービスの利用停止その他適切な措置を講じることができます。
+1. 本規約に違反する行為
+2. 法令または公序良俗に反する行為、またはそのおそれのある行為
+
+3. 当社または第三者に損害を与える行為、またはそのおそれのある行為
+
+4. 当社の活動を妨げる行為、当社または第三者の信頼を毀損する行為、もしくは、そのおそれのある行為
+
+5. 当社または第三者のタピアの本サービス利用に支障を与える行為、または与える恐れのある行為\n
+6. 本サービスを改変し、またはリバースエンジニアリング、逆コンパイル、逆アセンブル等すること
+
+7. 本サービスの利用を通じて提供される情報を改ざんする行為、または提供側の事前の同意なく第三者に開示する行為
+8. 本サービス利用に関連する権利及義務の全部または一部を第三者に譲渡・貸与する行為またはそれに準ずる行為
+9. 当社または第三者の著作権その他の知的財産権を侵害する行為または侵害するおそれのある行為
+
+10. 本サービスのサーバやネットワークシステムに支障を与える行為、BOT、チートツール、その他の技術的手段を利用してサービスを不正に操作する行為、本サービスの不具合を意図的に利用する行為、同様の質問を必要以上に繰り返す等、当社に対し不当な問い合わせまたは要求をする行為、その他当社による本サービスの運営または他のお客様による本サービスの利用を妨害し、これらに支障を与える行為。
+11. 政治活動・宗教活動（但、当社が規定した場合は除く）につながる行為
+12. 犯罪行為またはそれらにつながる行為
+13. 前各号に準ずる行為
+14. その他、当社が不適切と判断する行為
+
+
+第11条 利用上の制限\
+1. 当社は、以下の各号に該当する場合、お客様に事前に通知することなく、本サービスの全部または一部の提供を一時的に中断または停止することがあります。
+
+（1）本サービスの機能に係るシステムの保守・点検を行う場合
+
+（2）火災・停電等の事故、地震・洪水等の天災、戦争、暴動、第三者との紛争等により、本サービスの提供が出来なくなった場合
+
+（3）本サービスに係るシステムの障害等により、本サービスの提供ができなくなった場合\n
+（4）当社が運用上または技術上やむを得ず本サービスの提供の一時中断が必要であると判断した場合
+
+2. 当社は前項により、お客様または第三者に損害が生じたとしても、当該損害について一切の責任を負いません。
+3. 当社は、本サービスのバージョンアップを行う場合があります。本サービスのバージョンアップを行うまでの間、本サービスの全部または一部が利用できなくなる場合があります。
+
+
+第12条 変更、追加、廃止
+1. 当社は、業務上の都合により、お客様に事前に通知することなく、本サービスの全部または一部を変更、追加または廃止することがあります。
+2. 本サービスの全部または一部の変更、追加または廃止がお客様に重大な影響を及ぼすと当社が判断した場合は、当社はその変更、追加または廃止の内容を当社が適当と判断する方法によりお客様に周知するものとします。なお当社は、本サービスの全部または一部の変更、追加または廃止によりお客様に損害が生じたとしても、当該損害について一切の責任を負いません。
+
+
+第13条 連絡または通知について
+1. お客様への連絡または通知の必要があると当社が判断した場合には、本サービス上に表示する方法、電子メールを送信する方法その他適当な方法にて連絡または通知を行います。
+2. お客様が当社に対し連絡する場合、電子メールを利用して連絡を行うものとします。お客様は、当社に対し、電話・来訪による連絡はしないものとします。
+
+
+第14条 知的財産権
+本サービスに係る知的財産権は、当社または第三者に帰属します。本規約によるお客様への本サービスの提供は、お客様に対する何らかの権利移転等を意味するものではありません。
+
+
+第15条 損害賠償
+
+当社は、お客様の故意もしくは過失、本規約違反、または不正もしくは違法な本サービスの利用により当社が損害を被った場合の損害の賠償をお客様に請求することができるものとします。
+
+
+第16条 準拠法、裁判管轄\n
+本利用規約に関する準拠法は、全て日本国の法令が適用されるものとします。本規約または本サービスの利用に関して生じた紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hue-6y-FhW">
+                                <rect key="frame" x="24" y="109" width="327" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ueq-w5-Oct" firstAttribute="top" secondItem="hue-6y-FhW" secondAttribute="bottom" constant="20" id="2xj-DD-Q2g"/>
+                            <constraint firstItem="hue-6y-FhW" firstAttribute="top" secondItem="KY2-o5-LpM" secondAttribute="bottom" constant="45" id="Grm-NZ-m28"/>
+                            <constraint firstItem="ueq-w5-Oct" firstAttribute="leading" secondItem="z41-Xm-GuO" secondAttribute="leadingMargin" constant="8" id="STK-p5-xiZ"/>
+                            <constraint firstItem="hue-6y-FhW" firstAttribute="leading" secondItem="z41-Xm-GuO" secondAttribute="leadingMargin" constant="8" id="ceo-Ox-hh8"/>
+                            <constraint firstItem="494-mE-K4Y" firstAttribute="top" secondItem="ueq-w5-Oct" secondAttribute="bottom" constant="8" id="quc-EP-M7m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ueq-w5-Oct" secondAttribute="trailing" constant="8" id="tRn-nT-75h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hue-6y-FhW" secondAttribute="trailing" constant="8" id="uIl-Q4-iQv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ers-GX-UVy"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="ueq-w5-Oct" id="JbM-RU-aUu"/>
+                        <outlet property="titleLabel" destination="hue-6y-FhW" id="gIU-3f-xTx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyZ-xv-FN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7817" y="-1587"/>
+        </scene>
+        <!--Setting Privacy Policy View Controller-->
+        <scene sceneID="zdS-fX-eMo">
+            <objects>
+                <viewController id="h7V-P2-7OD" customClass="SettingPrivacyPolicyViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nMz-fj-tdj"/>
+                        <viewControllerLayoutGuide type="bottom" id="lYz-A4-VH6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="abH-bn-zuh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EOw-td-iKr">
+                                <rect key="frame" x="24" y="153" width="327" height="462"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tapia app privacy policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-tm-Q1x">
+                                <rect key="frame" x="24" y="109" width="327" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="EOw-td-iKr" secondAttribute="trailing" constant="8" id="2pc-Op-hGq"/>
+                            <constraint firstItem="jNG-tm-Q1x" firstAttribute="leading" secondItem="abH-bn-zuh" secondAttribute="leadingMargin" constant="8" id="ABD-1B-DIs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jNG-tm-Q1x" secondAttribute="trailing" constant="8" id="Oe0-Wp-a2B"/>
+                            <constraint firstItem="jNG-tm-Q1x" firstAttribute="top" secondItem="nMz-fj-tdj" secondAttribute="bottom" constant="45" id="hfF-Hx-9u1"/>
+                            <constraint firstItem="lYz-A4-VH6" firstAttribute="top" secondItem="EOw-td-iKr" secondAttribute="bottom" constant="8" id="w8j-aL-Nt6"/>
+                            <constraint firstItem="EOw-td-iKr" firstAttribute="leading" secondItem="abH-bn-zuh" secondAttribute="leadingMargin" constant="8" id="x83-CM-Z0Y"/>
+                            <constraint firstItem="EOw-td-iKr" firstAttribute="top" secondItem="jNG-tm-Q1x" secondAttribute="bottom" constant="20" id="xxv-EK-IzY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jTU-Sa-jgt"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="EOw-td-iKr" id="SyH-dh-BOf"/>
+                        <outlet property="titleLabel" destination="jNG-tm-Q1x" id="pys-qw-gUX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCh-Vn-bk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7818" y="-861"/>
+        </scene>
+        <!--RegisterVCIdentifier-->
+        <scene sceneID="Upq-pt-3Z9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PreLogin" referencedIdentifier="RegisterVCIdentifier" id="Jgv-0R-p3O" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNr-du-u9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6752" y="-162"/>
+        </scene>
+        <!--Setting Delete Account View Controller-->
+        <scene sceneID="QNG-Up-JFq">
+            <objects>
+                <viewController id="qjo-8t-Er5" customClass="SettingDeleteAccountViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QGS-Mb-KNR"/>
+                        <viewControllerLayoutGuide type="bottom" id="wV3-qN-4zS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P19-7c-Azl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DELETE ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jl-lz-uzS">
+                                <rect key="frame" x="24" y="109" width="327" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1E-NP-nnZ">
+                                <rect key="frame" x="24" y="518" width="327" height="30"/>
+                                <state key="normal" title="アカウントの削除"/>
+                                <connections>
+                                    <action selector="deleteButtonClicked:" destination="qjo-8t-Er5" eventType="touchUpInside" id="Aml-1H-wPU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="アカウントの削除 一度削除すると復元できません的な注意書きのようなテキストダミーダミーダミーダミーダミーダミーダーダミーダミーダミーダミーダ ミー ミーダミーダーダミーダミーダミーダミーダミーダミーダミーダミー" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pD0-de-LgB">
+                                <rect key="frame" x="24" y="153" width="327" height="345"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r1E-NP-nnZ" firstAttribute="leading" secondItem="P19-7c-Azl" secondAttribute="leadingMargin" constant="8" id="BNV-5f-Tg0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4jl-lz-uzS" secondAttribute="trailing" constant="8" id="DjT-Xh-LCM"/>
+                            <constraint firstItem="pD0-de-LgB" firstAttribute="top" secondItem="4jl-lz-uzS" secondAttribute="bottom" constant="20" id="LI9-9F-MxD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r1E-NP-nnZ" secondAttribute="trailing" constant="8" id="Pov-ef-miW"/>
+                            <constraint firstItem="4jl-lz-uzS" firstAttribute="top" secondItem="QGS-Mb-KNR" secondAttribute="bottom" constant="45" id="RpV-tU-Jsn"/>
+                            <constraint firstItem="pD0-de-LgB" firstAttribute="leading" secondItem="P19-7c-Azl" secondAttribute="leadingMargin" constant="8" id="a9A-ki-XVU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pD0-de-LgB" secondAttribute="trailing" constant="8" id="dky-IS-nhp"/>
+                            <constraint firstItem="r1E-NP-nnZ" firstAttribute="top" secondItem="pD0-de-LgB" secondAttribute="bottom" constant="20" id="lJQ-0V-DWB"/>
+                            <constraint firstItem="4jl-lz-uzS" firstAttribute="leading" secondItem="P19-7c-Azl" secondAttribute="leadingMargin" constant="8" id="uik-4T-NKc"/>
+                            <constraint firstItem="wV3-qN-4zS" firstAttribute="top" secondItem="r1E-NP-nnZ" secondAttribute="bottom" constant="75" id="vjd-C7-Wyz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K2m-Z8-7aa"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="pD0-de-LgB" id="fZD-l4-R2N"/>
+                        <outlet property="titleLabel" destination="4jl-lz-uzS" id="CQi-tg-5fL"/>
+                        <segue destination="sH9-b6-7JN" kind="unwind" identifier="ShowUnwindToStartViewController" unwindAction="UnwindToStartViewController:" id="5n7-8J-Hj4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1A-cY-V0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sH9-b6-7JN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="7817" y="-93"/>
+        </scene>
+        <!--Setting Version Table View Controller-->
+        <scene sceneID="7rT-B0-aMS">
+            <objects>
+                <tableViewController id="fa6-ct-ACT" customClass="SettingVersionTableViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cSo-ve-bcf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle=" " id="ouk-3P-94k">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="LLj-8F-pBT" detailTextLabel="G9o-6N-g8L" style="IBUITableViewCellStyleValue1" id="8dj-HX-dTx">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8dj-HX-dTx" id="nYS-Uj-EgM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Current version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LLj-8F-pBT">
+                                                    <rect key="frame" x="16" y="12" width="112" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G9o-6N-g8L">
+                                                    <rect key="frame" x="318.5" y="12" width="41.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="m9U-5u-s7a" detailTextLabel="gYX-jv-26y" style="IBUITableViewCellStyleValue1" id="Bg8-5N-679">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bg8-5N-679" id="0Jx-NU-9i4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Last version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9U-5u-s7a">
+                                                    <rect key="frame" x="16" y="12" width="87.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gYX-jv-26y">
+                                                    <rect key="frame" x="318.5" y="12" width="41.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fa6-ct-ACT" id="nxb-b8-jZE"/>
+                            <outlet property="delegate" destination="fa6-ct-ACT" id="nYo-OT-VHf"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="versionLastLabel" destination="gYX-jv-26y" id="cgq-4J-ZCK"/>
+                        <outlet property="versionNowLabel" destination="G9o-6N-g8L" id="bE9-IK-XYC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1HW-Uw-tiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7817" y="-2271"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Tab_home" width="25" height="25"/>
+        <image name="ToolBar_setting" width="22" height="22"/>
+        <image name="defaultPhoto" width="540" height="540"/>
+    </resources>
+</document>

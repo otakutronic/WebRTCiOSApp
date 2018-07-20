@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xtg-EX-N77">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XWf-M5-MLb">
+            <objects>
+                <viewController id="xtg-EX-N77" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JcF-nI-YSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Artboard 1-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="oLV-cZ-DEN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Artboard 2-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-Xu-Kwd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Artboard 3-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="U5O-9x-yqy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g6G-Xu-Kwd" firstAttribute="centerX" secondItem="ARN-2y-vU7" secondAttribute="centerX" id="6IY-2T-hgU"/>
+                            <constraint firstItem="U5O-9x-yqy" firstAttribute="centerX" secondItem="ARN-2y-vU7" secondAttribute="centerX" id="CEi-Xl-AD4"/>
+                            <constraint firstItem="oLV-cZ-DEN" firstAttribute="height" secondItem="JcF-nI-YSh" secondAttribute="height" constant="10" id="D5Y-CG-PHu"/>
+                            <constraint firstItem="U5O-9x-yqy" firstAttribute="width" secondItem="JcF-nI-YSh" secondAttribute="width" id="G66-6l-73p"/>
+                            <constraint firstItem="g6G-Xu-Kwd" firstAttribute="centerY" secondItem="ARN-2y-vU7" secondAttribute="centerY" constant="-5" id="Our-lH-hOd"/>
+                            <constraint firstItem="oLV-cZ-DEN" firstAttribute="width" secondItem="JcF-nI-YSh" secondAttribute="width" id="Vw0-yO-r9w"/>
+                            <constraint firstItem="oLV-cZ-DEN" firstAttribute="centerX" secondItem="ARN-2y-vU7" secondAttribute="centerX" id="Xa9-3c-FNl"/>
+                            <constraint firstItem="g6G-Xu-Kwd" firstAttribute="width" secondItem="JcF-nI-YSh" secondAttribute="width" id="Y59-NL-Ynj"/>
+                            <constraint firstItem="g6G-Xu-Kwd" firstAttribute="height" secondItem="JcF-nI-YSh" secondAttribute="height" constant="10" id="YQJ-m8-tQm"/>
+                            <constraint firstItem="U5O-9x-yqy" firstAttribute="height" secondItem="JcF-nI-YSh" secondAttribute="height" constant="10" id="aeH-m7-0nK"/>
+                            <constraint firstItem="U5O-9x-yqy" firstAttribute="centerY" secondItem="ARN-2y-vU7" secondAttribute="centerY" constant="-5" id="di1-pn-fiP"/>
+                            <constraint firstItem="oLV-cZ-DEN" firstAttribute="centerY" secondItem="ARN-2y-vU7" secondAttribute="centerY" constant="-5" id="iZI-Hs-Wv9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ARN-2y-vU7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEJ-cH-CQm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567.20000000000005" y="408.84557721139436"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Artboard 1-01.png" width="621" height="1104"/>
+        <image name="Artboard 2-01.png" width="621" height="1104"/>
+        <image name="Artboard 3-01.png" width="621" height="1104"/>
+    </resources>
+</document>

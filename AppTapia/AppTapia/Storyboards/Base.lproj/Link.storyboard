@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mqe-ku-L0T">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tapia Link-->
+        <scene sceneID="VaD-Yf-Wge">
+            <objects>
+                <tableViewController id="qOJ-sj-xQN" customClass="TapiaLinkTableViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="w5U-vR-YGd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewEntry" rowHeight="90" id="GzZ-Cx-NJF" customClass="TableViewEntryLink" customModule="AppTapia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GzZ-Cx-NJF" id="dJh-aC-jG0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="oJ7-le-uYm" customClass="MJIRoundImageView" customModule="AppTapia" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqz-rb-ZiU">
+                                            <rect key="frame" x="97" y="8" width="270" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Lqz-rb-ZiU" id="lDP-pA-30f"/>
+                                    <outlet property="photoImageView" destination="oJ7-le-uYm" id="Woh-Ju-yUy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qOJ-sj-xQN" id="Fpc-tE-yaQ"/>
+                            <outlet property="delegate" destination="qOJ-sj-xQN" id="wIs-Qo-G7B"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tapia Link" id="NSn-Lk-MB9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Co1-yd-HxE">
+                            <connections>
+                                <segue destination="ph9-dD-ijI" kind="show" identifier="LinkAddViewController" id="ypu-ML-W5o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="cZA-kQ-gRf" kind="presentation" identifier="LinkEditViewController" id="Kc1-BD-wvD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpp-rs-vGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5345" y="2346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rdk-Oh-eUC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mqe-ku-L0T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Tab_link" selectedImage="Tab_link" id="QZY-fN-amT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qha-AA-IqU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qOJ-sj-xQN" kind="relationship" relationship="rootViewController" id="Ssc-Ra-DRG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekV-IG-BtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4562" y="2346"/>
+        </scene>
+        <!--タピアりんく-->
+        <scene sceneID="47m-wm-oxS">
+            <objects>
+                <viewController id="bPP-Mg-Hlv" userLabel="タピアりんく" customClass="LinkAddViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j2v-4P-zjf"/>
+                        <viewControllerLayoutGuide type="bottom" id="IAK-Mw-P5r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zBO-IA-C0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="c1l-MM-IgS">
+                                <rect key="frame" x="24" y="334" width="327" height="48"/>
+                                <state key="normal">
+                                    <string key="title">Phone Number
+Authentication</string>
+                                </state>
+                                <connections>
+                                    <segue destination="oj6-IT-PCf" kind="show" id="YkW-Cd-0Mh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tapia is not near." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdT-QD-JSR">
+                                <rect key="frame" x="24" y="308" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tapia is near." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaY-Xw-yld">
+                                <rect key="frame" x="24" y="209" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ddq-yQ-N1G">
+                                <rect key="frame" x="24" y="235" width="327" height="48"/>
+                                <state key="normal">
+                                    <string key="title">Face-To-Face
+Authentication</string>
+                                </state>
+                                <connections>
+                                    <segue destination="4DC-Ni-aaR" kind="show" id="gr3-9h-b96"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="タピアりんくとはタピア本体とアプリの接続を行うことです。下記より設定してください。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-DJ-Z42">
+                                <rect key="frame" x="24" y="89" width="327" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Nqr-zh-0pf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="c1l-MM-IgS" secondAttribute="trailing" constant="8" id="479-SN-Uh5"/>
+                            <constraint firstItem="HaY-Xw-yld" firstAttribute="leading" secondItem="zBO-IA-C0Z" secondAttribute="leadingMargin" constant="8" id="4IS-Cw-p2b"/>
+                            <constraint firstItem="CdT-QD-JSR" firstAttribute="centerX" secondItem="zBO-IA-C0Z" secondAttribute="centerX" id="BwS-BH-dT7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HaY-Xw-yld" secondAttribute="trailing" constant="8" id="F5Q-vz-XnM"/>
+                            <constraint firstItem="zL4-DJ-Z42" firstAttribute="centerX" secondItem="zBO-IA-C0Z" secondAttribute="centerX" id="In2-Fo-J8J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zL4-DJ-Z42" secondAttribute="trailing" constant="8" id="UxK-sC-C7O"/>
+                            <constraint firstItem="c1l-MM-IgS" firstAttribute="centerX" secondItem="zBO-IA-C0Z" secondAttribute="centerX" id="V6O-DU-wdM"/>
+                            <constraint firstItem="zL4-DJ-Z42" firstAttribute="leading" secondItem="zBO-IA-C0Z" secondAttribute="leadingMargin" constant="8" id="VIg-h1-7bK"/>
+                            <constraint firstItem="Ddq-yQ-N1G" firstAttribute="centerX" secondItem="zBO-IA-C0Z" secondAttribute="centerX" id="X2o-zt-Ai9"/>
+                            <constraint firstItem="HaY-Xw-yld" firstAttribute="top" secondItem="zL4-DJ-Z42" secondAttribute="bottom" constant="20" id="dPm-lu-zXR"/>
+                            <constraint firstItem="zL4-DJ-Z42" firstAttribute="top" secondItem="j2v-4P-zjf" secondAttribute="bottom" constant="25" id="eVF-vv-CO0"/>
+                            <constraint firstItem="c1l-MM-IgS" firstAttribute="leading" secondItem="zBO-IA-C0Z" secondAttribute="leadingMargin" constant="8" id="fe4-Go-3ax"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ddq-yQ-N1G" secondAttribute="trailing" constant="8" id="gBM-ap-5JR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CdT-QD-JSR" secondAttribute="trailing" constant="8" id="hmO-Tm-E7S"/>
+                            <constraint firstItem="c1l-MM-IgS" firstAttribute="top" secondItem="CdT-QD-JSR" secondAttribute="bottom" constant="5" id="jf7-9Q-dPL"/>
+                            <constraint firstItem="HaY-Xw-yld" firstAttribute="centerX" secondItem="zBO-IA-C0Z" secondAttribute="centerX" id="jiK-aV-EAD"/>
+                            <constraint firstItem="CdT-QD-JSR" firstAttribute="leading" secondItem="zBO-IA-C0Z" secondAttribute="leadingMargin" constant="8" id="kDq-gA-VsM"/>
+                            <constraint firstItem="CdT-QD-JSR" firstAttribute="top" secondItem="Ddq-yQ-N1G" secondAttribute="bottom" constant="25" id="l9d-Vf-vQS"/>
+                            <constraint firstItem="Ddq-yQ-N1G" firstAttribute="top" secondItem="HaY-Xw-yld" secondAttribute="bottom" constant="5" id="mMr-8W-EdG"/>
+                            <constraint firstItem="Ddq-yQ-N1G" firstAttribute="leading" secondItem="zBO-IA-C0Z" secondAttribute="leadingMargin" constant="8" id="wYj-Vs-XjK"/>
+                            <constraint firstItem="c1l-MM-IgS" firstAttribute="top" secondItem="CdT-QD-JSR" secondAttribute="bottom" constant="5" id="zKq-0s-BG0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gHH-cT-oDl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="タピアりんく" id="XlZ-hC-Kh2" userLabel="Navigation Item">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6OM-rD-EfF">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="bPP-Mg-Hlv" id="MCd-U9-Sts"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yX6-5v-vu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7001" y="2346"/>
+        </scene>
+        <!--Link Edit View Controller-->
+        <scene sceneID="Smc-EO-tCi">
+            <objects>
+                <viewController id="ohj-CI-NPc" userLabel="Link Edit View Controller" customClass="LinkEditViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O4i-qb-Wjx"/>
+                        <viewControllerLayoutGuide type="bottom" id="XMA-8L-LRc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1uM-7Q-IVU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sJF-56-Bj3">
+                                <rect key="frame" x="16" y="84" width="343" height="138"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMC-df-DBO">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" image="tapia1" translatesAutoresizingMaskIntoConstraints="NO" id="D48-QI-XoB">
+                                        <rect key="frame" x="121.5" y="38" width="100" height="100"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="D48-QI-XoB" secondAttribute="height" multiplier="1:1" id="7sy-Y6-JVW"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="SC6-4h-M2C" appends="YES" id="rpW-XC-uyc"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZMC-df-DBO" secondAttribute="trailing" id="gyA-PQ-y1n"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JX-Gv-G0X">
+                                <rect key="frame" x="102" y="406" width="170" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="changeButtonClicked:" destination="ohj-CI-NPc" eventType="primaryActionTriggered" id="YgD-Ls-cjg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sJF-56-Bj3" firstAttribute="leading" secondItem="1uM-7Q-IVU" secondAttribute="leadingMargin" id="Jfa-zY-pmI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sJF-56-Bj3" secondAttribute="trailing" id="Rp3-Ru-tYJ"/>
+                            <constraint firstItem="sJF-56-Bj3" firstAttribute="top" secondItem="O4i-qb-Wjx" secondAttribute="bottom" constant="20" id="v25-uS-cvV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qVl-Pt-eyI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact" id="fcM-kw-pG3" userLabel="Navigation Item">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BhY-uW-deG">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="ohj-CI-NPc" id="Kh3-rq-Xbq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="q4q-dO-rLs">
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="ohj-CI-NPc" id="vwE-pU-gs3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contactImageView" destination="D48-QI-XoB" id="DpM-Ie-Esc"/>
+                        <outlet property="nameTextField" destination="ZMC-df-DBO" id="QmI-tO-C0I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3j-Vy-U3s" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SC6-4h-M2C"/>
+            </objects>
+            <point key="canvasLocation" x="6165.6000000000004" y="3159.6701649175416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3gh-0R-ZlR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ph9-dD-ijI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VM5-wq-8iY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bPP-Mg-Hlv" kind="relationship" relationship="rootViewController" id="Ot8-c7-Q4Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Bb-sI-k8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6168" y="2345.1274362818594"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qdx-Nn-cfd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZA-kQ-gRf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rAq-Uz-BSM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ohj-CI-NPc" kind="relationship" relationship="rootViewController" id="Vhz-zp-w0r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCJ-D2-9NF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5345" y="3160"/>
+        </scene>
+        <!--Link Add Phone View Controller-->
+        <scene sceneID="o44-EE-6o9">
+            <objects>
+                <viewController id="oj6-IT-PCf" customClass="LinkAddPhoneViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hhz-ld-crx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zh0-f5-9mz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rnq-S2-Jm4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="タピア本体に登録してあるオーナーの電話番号を入力してください。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="apl-QP-7kQ">
+                                <rect key="frame" x="24" y="90" width="327" height="188"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf0-gd-0bo">
+                                <rect key="frame" x="170" y="399" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendButtonClicked:" destination="oj6-IT-PCf" eventType="touchUpInside" id="TLB-fO-n9L"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PAb-KF-pN9" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                <rect key="frame" x="63" y="319" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="tlM-c9-ubM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PAb-KF-pN9" firstAttribute="centerY" secondItem="rnq-S2-Jm4" secondAttribute="centerY" id="ALm-IK-Ntl"/>
+                            <constraint firstItem="PAb-KF-pN9" firstAttribute="top" secondItem="apl-QP-7kQ" secondAttribute="bottom" constant="41" id="Azq-Rx-3fG"/>
+                            <constraint firstItem="PAb-KF-pN9" firstAttribute="centerX" secondItem="rnq-S2-Jm4" secondAttribute="centerX" id="D7B-F1-z5v"/>
+                            <constraint firstItem="apl-QP-7kQ" firstAttribute="centerX" secondItem="rnq-S2-Jm4" secondAttribute="centerX" id="UL6-vx-Vg3"/>
+                            <constraint firstItem="apl-QP-7kQ" firstAttribute="leading" secondItem="rnq-S2-Jm4" secondAttribute="leadingMargin" constant="8" id="Y02-3T-ieM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="apl-QP-7kQ" secondAttribute="trailing" constant="8" id="a0a-LN-ACi"/>
+                            <constraint firstItem="apl-QP-7kQ" firstAttribute="top" secondItem="Hhz-ld-crx" secondAttribute="bottom" constant="26" id="hOf-O5-pDb"/>
+                            <constraint firstItem="qf0-gd-0bo" firstAttribute="top" secondItem="PAb-KF-pN9" secondAttribute="bottom" constant="50" id="iqj-YP-5hL"/>
+                            <constraint firstItem="qf0-gd-0bo" firstAttribute="centerX" secondItem="rnq-S2-Jm4" secondAttribute="centerX" id="pNo-sQ-9It"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CfE-aJ-a26"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneNumTextField" destination="PAb-KF-pN9" id="2sz-Zm-uxQ"/>
+                        <segue destination="h0Y-rn-DAf" kind="unwind" identifier="ShowUnwindToMainTabBarController" unwindAction="unwindToMainTabBarController:" id="Hhz-oR-Zri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IM9-3a-YVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="h0Y-rn-DAf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="7822" y="3160"/>
+        </scene>
+        <!--Link Add PreQR Code View Controller-->
+        <scene sceneID="8dc-kt-poj">
+            <objects>
+                <viewController id="4DC-Ni-aaR" customClass="LinkAddPreQRCodeViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r35-LG-gVA"/>
+                        <viewControllerLayoutGuide type="bottom" id="xId-mz-tdi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y6Z-3M-MOo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLx-Gn-gEa">
+                                <rect key="frame" x="24" y="90" width="327" height="433"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="1) ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">目の前のタピアがおはなしモードの時に「りんくの設定」と話しかけてください。
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="2) ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="選択">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="オーナーの選択によって使用できる機能は異なります。りんくできるオーナー数に制限はありません。">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="・オーナー（メインオーナー）">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="タピアりんく／タピアとーく／タピアあるばむ／タピアでみまもり">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="・家族（サブオーナー）">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="タピアりんく／タピアとーく／タピアあるばむ／タピアでみまもり（リクエスト申請・承認後）">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="・友達">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="タピアりんく／タピアとーく">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+3) </string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ボタンを押したら">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="QR">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="コードが発行されます。">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="4) QR">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="コードリーダーで読み込んでください。">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t96-Wi-ZFN">
+                                <rect key="frame" x="48" y="531" width="263" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="263" id="5Rx-re-nR9"/>
+                                </constraints>
+                                <state key="normal" title="QR Code Reader"/>
+                                <connections>
+                                    <segue destination="jFX-Rf-K7h" kind="presentation" id="dEb-nz-t0X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="t96-Wi-ZFN" firstAttribute="centerX" secondItem="Y6Z-3M-MOo" secondAttribute="centerX" id="0hp-DH-YGH"/>
+                            <constraint firstItem="t96-Wi-ZFN" firstAttribute="top" secondItem="xLx-Gn-gEa" secondAttribute="bottom" constant="30" id="40s-bH-qq6"/>
+                            <constraint firstItem="xLx-Gn-gEa" firstAttribute="leading" secondItem="Y6Z-3M-MOo" secondAttribute="leadingMargin" constant="8" id="B2L-0E-PhH"/>
+                            <constraint firstItem="xLx-Gn-gEa" firstAttribute="top" secondItem="r35-LG-gVA" secondAttribute="bottom" constant="26" id="HWN-z4-9I0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xLx-Gn-gEa" secondAttribute="trailing" constant="8" id="eDh-bd-3nL"/>
+                            <constraint firstItem="xId-mz-tdi" firstAttribute="top" secondItem="t96-Wi-ZFN" secondAttribute="bottom" constant="192" id="pl4-61-c0f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TdP-oG-6Q5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Um-fU-wOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7822" y="2346"/>
+        </scene>
+        <!--対面認証-->
+        <scene sceneID="yDC-89-BKT">
+            <objects>
+                <viewController id="QT9-bi-gA0" customClass="LinkAddQRCodeViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r31-5D-JOT"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Bv-ge-XVl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z4B-t2-hBX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="GXV-46-oyJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="対面認証" id="mti-F9-IFo">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nlb-i7-RK9">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="QT9-bi-gA0" id="fVw-Se-LOP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ITn-eA-ZuN" kind="presentation" identifier="LinkAddQRCodeSuccessViewController" id="h0F-Ey-R8S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMp-fT-OJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9449" y="2346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VVe-Oo-6hH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jFX-Rf-K7h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="inQ-3S-D7I">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QT9-bi-gA0" kind="relationship" relationship="rootViewController" id="QhO-fU-6Zi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lim-bY-pKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8638" y="2346"/>
+        </scene>
+        <!--Link AddQR Code Success View Controller-->
+        <scene sceneID="w3s-Ee-uzx">
+            <objects>
+                <viewController id="ITn-eA-ZuN" customClass="LinkAddQRCodeSuccessViewController" customModule="AppTapia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Px9-nT-7dN"/>
+                        <viewControllerLayoutGuide type="bottom" id="as1-WS-DCp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bFR-vE-8fA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="タピアとの接続が完了しました！ \n\n「タピア%@」をタピアと～くリストに追加しました。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bZa-wl-uuQ">
+                                <rect key="frame" x="24" y="40" width="327" height="259"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RK-jr-M2f">
+                                <rect key="frame" x="167" y="319" width="41" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="fZj-9f-1td" kind="unwind" identifier="ShowUnwindToMainTabBarController" unwindAction="unwindToLinkTableViewController:" id="ibH-ni-ESC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bZa-wl-uuQ" firstAttribute="leading" secondItem="bFR-vE-8fA" secondAttribute="leadingMargin" constant="8" id="5cJ-5c-d0K"/>
+                            <constraint firstItem="6RK-jr-M2f" firstAttribute="centerX" secondItem="bFR-vE-8fA" secondAttribute="centerX" id="6bf-jK-gjl"/>
+                            <constraint firstItem="6RK-jr-M2f" firstAttribute="centerY" secondItem="bFR-vE-8fA" secondAttribute="centerY" id="6om-JR-8oZ"/>
+                            <constraint firstItem="bZa-wl-uuQ" firstAttribute="top" secondItem="Px9-nT-7dN" secondAttribute="bottom" constant="20" id="CQI-Yl-hSU"/>
+                            <constraint firstItem="6RK-jr-M2f" firstAttribute="top" secondItem="bZa-wl-uuQ" secondAttribute="bottom" constant="20" id="MbP-V0-n2L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bZa-wl-uuQ" secondAttribute="trailing" constant="8" id="Tuy-6J-EV4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HPV-he-rHO"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="bZa-wl-uuQ" id="33j-vH-yjp"/>
+                    </connections>
+                </viewController>
+                <exit id="fZj-9f-1td" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1o-8Z-BZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10250" y="2345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Tab_link" width="25" height="25"/>
+        <image name="defaultPhoto" width="540" height="540"/>
+        <image name="tapia1" width="180" height="180"/>
+    </resources>
+</document>

@@ -1,0 +1,39 @@
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "1mA-aP-9Rd"; */
+"1mA-aP-9Rd.headerTitle" = " ";
+
+/* Class = "UILabel"; text = "Tapia Photos"; ObjectID = "CgP-e6-Mxf"; */
+"CgP-e6-Mxf.text" = "Tapia Photos";
+
+/* Class = "UILabel"; text = "0枚"; ObjectID = "FuO-DT-93A"; */
+"FuO-DT-93A.text" = "0枚";
+
+/* Class = "UIButton"; normalTitle = "Reads the image in QR reader"; ObjectID = "N82-yo-sGb"; */
+"N82-yo-sGb.normalTitle" = "Reads the image in QR reader";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "NAB-Kt-3dL"; */
+"NAB-Kt-3dL.headerTitle" = " ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "O1F-6M-CF6"; */
+"O1F-6M-CF6.text" = "Label";
+
+/* Class = "UILabel"; text = "Monitoring Photos"; ObjectID = "QOI-8q-3Rx"; */
+"QOI-8q-3Rx.text" = "Monitoring Photos";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "XKa-9G-bQA"; */
+"XKa-9G-bQA.text" = "Name";
+
+/* Class = "UINavigationItem"; title = "New Entry"; ObjectID = "Yuc-3R-ctw"; */
+"Yuc-3R-ctw.title" = "New Entry";
+
+/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "hO4-Cv-ngB"; */
+"hO4-Cv-ngB.footerTitle" = " ";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "hO4-Cv-ngB"; */
+"hO4-Cv-ngB.headerTitle" = " ";
+
+/* Class = "UINavigationItem"; title = "Tapia Album"; ObjectID = "iYP-xd-jCW"; */
+"iYP-xd-jCW.title" = "Tapia Album";
+
+/* Class = "UILabel"; text = "0枚"; ObjectID = "rFZ-Fe-ncC"; */
+"rFZ-Fe-ncC.text" = "0枚";
